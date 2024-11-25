@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Project - LDU Factorization Calculator</title>
+    <title>Group Project - LDU Decomposition Calculator</title>
     <link rel="stylesheet" href="ldu.css">
+    
 </head>
 <body>
     <div class="container">
@@ -12,8 +13,8 @@
         <div class="team">
             <div class="member">
                 <img src="PSK new.png" alt="Prem Shankar Kushwaha">
-                <p>PREM SHANKAR </p>
-                <p> KUSHWAHA</p>
+                <p>PREM SHANKAR</p>
+                <p>KUSHWAHA</p>
             </div>
             <div class="member">
                 <img src="PP new.png" alt="Prabhat Patidar">
@@ -35,33 +36,25 @@
     </div>
 
     <div class="calculator">
-        <h2>LDU Factorization Calculator</h2>
+        <h2>LDU Decomposition Calculator</h2>
         <label for="matrix-dimension">Enter Matrix Dimension (n x n):</label>
-        <input type="text" id="matrix-dimension" placeholder="e.g., 3">
+        <input type="number" id="matrix-dimension" min="2" placeholder="e.g., 3">
         <button onclick="generateMatrix()">Generate Matrix</button>
+        <div id="matrix-inputs"></div>
+        <button id="calculate-button" onclick="performLDU()" style="display: none;">Calculate</button>
     </div>
-
     <div class="info-box">
         <button onclick="openDocumentation()">Documentation</button>
         <button onclick="openEmailThread()">Email Thread</button>
         <button onclick="opengithubrepo()">Github Repo</button>
+        </div>
+
+    <!-- Results Section -->
+    <div id="results-section" class="results-section" style="display: none;">
+        <h3>Calculation of LDU Decomposition</h3>
+        <div id="results"></div>
     </div>
-
-    <script>
-        function generateMatrix() {
-            alert("Developers don't know JavaScript.");
-        }
-
-        function openDocumentation() {
-            window.open('file:///C:/Users/99101/OneDrive/Desktop/LDU/Documentation.pdf', '_blank');
-        }
-
-        function openEmailThread() {
-            window.open('file:///C:/Users/99101/OneDrive/Desktop/LDU/email_thread%20-%20Copy.pdf', '_blank');
-        }
-        function opengithubrepo(){
-            window.open('https://github.com/Arun404notfound/LDU-factorisation.git', '_blank')
-        }
-    </script>
+    <script src="LDU.js"></script>
 </body>
 </html>
+
